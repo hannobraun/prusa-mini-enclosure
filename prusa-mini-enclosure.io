@@ -88,3 +88,15 @@
 ; height = 425mm
 ;
 ; TASK: Add assertions here to make sure these are the correct values.
+
+; # References for Later
+;
+; Here's a bunch of stuff that's going to be useful in later stages of the
+; planning process.
+;
+; Here are extension cables for the USB and the power switch on the Mini:
+; https://shop.levendigdsgn.com/products/usb-powerswitch-extension-cable-prusa-mini
+;
+; The same shop also has printed parts for extending the display unit:
+; - https://shop.levendigdsgn.com/products/usb-powerswitch-extension-printed-parts-front-prusa-mini
+; - https://shop.levendigdsgn.com/collections/prusa-mini-mods-upgrades/products/usb-powerswitch-backplate-front-prusa-mini
