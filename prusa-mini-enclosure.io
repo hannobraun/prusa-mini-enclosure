@@ -11,6 +11,8 @@
 ;
 ; ---------------------------------------------------------------------------- ;
 
+; All units are mm.
+
 ; # Internal Dimensions
 ;
 ; Let's take a look at the internal dimensions of the enclosure, how I came up
