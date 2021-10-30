@@ -7,7 +7,7 @@
 
 ; I'm using libfive Studio to edit this file, and its editor doesn't give me any
 ; way to tell which column I'm currently in. The following line is 80 characters
-; long and serves as a reference while writing code in libfive Studio.
+; long and allows me to calibrate the width of the editor.
 ;
 ; ---------------------------------------------------------------------------- ;
 
