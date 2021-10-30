@@ -88,7 +88,7 @@ margin_top = 40
 # Sum it up to get the total height:
 inner_height = printer_height + margin_top
 
-# To summarize, these are the inner dimensions:
+# These are the values for the inner dimensions:
 assert inner_width == 415
 assert inner_depth == 470
 assert inner_height == 425
