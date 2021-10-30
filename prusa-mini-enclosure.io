@@ -22,18 +22,19 @@
 ;
 ; ## Width
 ;
-; The printer is about 325mm wide.
+; The approximate width of the printer:
 (define printer-width 325)
 
 ; We need some extra wiggle room to take the printer into or out of the
-; enclosure. Let's say 30mm on each side.
+; enclosure. Here's a nice value for the left side:
 (define margin-left 30)
 
-; However, you'd typically lift the printer by grasping the z-axis extrusion
-; from the right. I estimate that I need 60mm to do that comfortably.
+; The right side needs a larger margin. You'd typically lift the printer by
+; grasping the z-axis extrusion from the right. The following margin should
+; allow me to do that comfortably:
 (define margin-right 60)
 
-; The final width is the sum of those numbers.
+; The final width is the sum of those numbers:
 (define inner-width (+ printer-width margin-left margin-right))
 
 ; ## Depth
@@ -41,7 +42,7 @@
 ; Measuring the depth of the printer is complicated by the fact that the y-axis
 ; is moving front-to-back.
 ;
-; Let's start with the base of the y-axis assembly. It's about 285mm long.
+; Let's start with the length of the y-axis assembly's base:
 (define y-assembly-base-depth 285)
 
 ; Now let's add how much the print bed overhangs while the y-axis is in its
@@ -57,11 +58,11 @@
 ; but is completely covered by the back overhang.
 ;
 ; In addition to the overhang, we need to consider the cable going to the
-; heated bed. 60mm should be enough clearance for the plug and the cable,
-; without bending it too much.
+; heated bed. This should provide enough clearance for the plug and the cable,
+; without bending it too much:
 (define margin-heat-bed-cable 60)
 
-; Lastly, we need a bit of margin in the front. This should be enough:
+; Lastly, we need a bit of margin in the front:
 (define margin-front 20)
 
 ; Inner depth is the sum of all of these:
@@ -81,7 +82,7 @@
 ; Next, a bit of margin on top to take it into or out of the enclosure:
 (define margin-top 40)
 
-; Add it to get the height:
+; Sum it up to get the total height:
 (define inner-height (+ printer-height margin-top))
 
 ; To summarize, these are the inner dimensions:
