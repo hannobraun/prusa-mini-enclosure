@@ -93,6 +93,24 @@ assert inner_width == 415
 assert inner_depth == 470
 assert inner_height == 425
 
+
+# ## Outer Dimensions
+#
+# To compute the outer dimensions, we need to know the material strength. The
+# following is my current assumption:
+material_strength = 12
+
+# This gives us the following outer dimensions:
+outer_width = inner_width + material_strength * 2
+outer_depth = inner_depth + material_strength * 2
+outer_height = inner_height + material_strength * 2
+
+# These are the values for the outer dimensions:
+assert outer_width == 439
+assert outer_depth == 494
+assert outer_height == 449
+
+
 # ## References for Later
 #
 # Here's a bunch of stuff that's going to be useful in later stages of the
