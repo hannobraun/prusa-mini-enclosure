@@ -10,16 +10,24 @@ studio.set_resolution(10)
 #
 # ---------------------------------------------------------------------------- #
 
-# All units are mm.
-
-# # Internal Dimensions
+# # Prusa Mini Enclosure
+#
+# A friend offered to build an enclosure for my Prusa Mini out of plywood, as
+# long as I design it. This file presents the design and documents the design
+# intent. It is intentionally vague in some areas, as many decisions are left up
+# to my friend.
+#
+# All units are in mm.
+#
+#
+# ## Internal Dimensions
 #
 # Let's take a look at the internal dimensions of the enclosure, how I came up
 # with them, and the constraints they are driven by. The design intent here is
 # to define dimensions that fit the printer, allow me to handle the printer, but
 # are otherwise as small as practical, to not make the enclosure overly large.
 #
-# ## Width
+# ### Width
 #
 # The approximate width of the printer:
 printer_width = 325
@@ -36,7 +44,7 @@ margin_right = 60
 # The final width is the sum of those numbers:
 inner_width = printer_width + margin_left + margin_right
 
-# ## Depth
+# ### Depth
 #
 # Measuring the depth of the printer is complicated by the fact that the y-axis
 # is moving front-to-back.
@@ -68,7 +76,7 @@ margin_front = 20
 inner_depth = y_assembly_base_depth + print_bed_overhang_front + \
     print_bed_overhang_back + margin_heat_bed_cable + margin_front
 
-# # Height
+# ### Height
 #
 # Now the height. This one is the most straight-forward. First, the printer
 # height:
@@ -85,7 +93,7 @@ assert inner_width == 415
 assert inner_depth == 470
 assert inner_height == 425
 
-# # References for Later
+# ## References for Later
 #
 # Here's a bunch of stuff that's going to be useful in later stages of the
 # planning process.
