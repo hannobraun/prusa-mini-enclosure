@@ -1,8 +1,6 @@
 import studio
 
 studio.set_bounds([-10, -10, -10], [10, 10, 10])
-studio.set_quality(8)
-studio.set_resolution(1)
 
 # I'm using libfive Studio to edit this file, and its editor doesn't give me any
 # way to tell which column I'm currently in. The following line is 80 characters
@@ -20,6 +18,16 @@ studio.set_resolution(1)
 # All units are in millimeters.
 #
 #
+# ## Basic Parameters
+#
+# First, we need to set some basic parameters of the CAD program. Leaving
+# quality at the default value caused no problems so far, but I severely reduced
+# resolution for performance reasons. It's the reciprocal of the minimum feature
+# size, and we really don't need sub-millimeter features.
+studio.set_quality(8)
+studio.set_resolution(1)
+
+
 # ## Internal Dimensions
 #
 # Let's take a look at the internal dimensions of the enclosure, how I came up
