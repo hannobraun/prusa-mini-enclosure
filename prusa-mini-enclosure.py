@@ -232,6 +232,33 @@ for component in components:
 result
 
 
+# ## Door
+#
+# The previous definition leaves out the door. How that's going to look exactly
+# is going to be left to the builder, but here are a few thoughts:
+# - There should be a window in there that's as large as possible, to watch
+#   ongoing prints.
+# - Hinges should be placed on the left side. When putting the printer in or
+#   taking it out, the door is much more likely to be in the way on the right
+#   side.
+# - I can 3D print a handle, so if none is at hand during construction, that's
+#   not a problem
+#
+# ### Magnets
+#
+# To hold the door closed, I think magnets are a good solution that's also
+# easy to implement.
+#
+# I'm not sure how many would be appropriate, and where exactly to place them.
+# But they should be closed as close to the edge of the door as practical, so
+# their counterpart is not in the way when taking the printer into or out of the
+# enclosure.
+#
+# I can easily print magnet holders that I can screw to the enclosure. This
+# shouldn't be a problem and can easily be done after the enclosure has been
+# built.
+
+
 # ## References for Later
 #
 # Here's a bunch of stuff that's going to be useful in later stages of the
