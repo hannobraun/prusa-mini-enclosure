@@ -17,7 +17,7 @@ studio.set_resolution(10)
 # intent. It is intentionally vague in some areas, as many decisions are left up
 # to my friend.
 #
-# All units are in mm.
+# All units are in millimeters.
 #
 #
 # ## Internal Dimensions
