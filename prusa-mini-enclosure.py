@@ -2,7 +2,7 @@ import studio
 
 studio.set_bounds([-10, -10, -10], [10, 10, 10])
 studio.set_quality(8)
-studio.set_resolution(10)
+studio.set_resolution(1)
 
 # I'm using libfive Studio to edit this file, and its editor doesn't give me any
 # way to tell which column I'm currently in. The following line is 80 characters
