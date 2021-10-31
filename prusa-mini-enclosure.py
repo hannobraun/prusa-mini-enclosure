@@ -129,7 +129,7 @@ assert outer_height < 450
 # Here's a bunch of stuff that's going to be useful in later stages of the
 # planning process.
 #
-# Here are extension cables for the USB and the power switch on the Mini:
+# These are extension cables for the USB and the power switch on the Mini:
 # https://shop.levendigdsgn.com/products/usb-powerswitch-extension-cable-prusa-mini
 #
 # The same shop also has printed parts for extending the display unit:
