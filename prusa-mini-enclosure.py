@@ -1,6 +1,5 @@
 import studio
 
-studio.set_bounds([-10, -10, -10], [10, 10, 10])
 
 # I'm using libfive Studio to edit this file, and its editor doesn't give me any
 # way to tell which column I'm currently in. The following line is 80 characters
@@ -118,6 +117,9 @@ assert outer_width == 439
 assert outer_depth == 494
 assert outer_height == 449
 
+# Now that we know the outer dimensions, we can define the bounds of our CAD
+# modeling space. Let's set the other parameters too, while we're at it.
+studio.set_bounds([0, 0, 0], [outer_width, outer_depth, outer_height])
 
 # ## Tolerances
 #
