@@ -1,3 +1,4 @@
+import libfive.stdlib.shapes as shapes
 import studio
 
 
@@ -138,6 +139,80 @@ studio.set_bounds(
 #
 # To be on the safe side, the height should be limited to this value:
 assert outer_height < 450
+
+
+# ## Structure
+#
+# Now that we got the dimensions, let's think about the structure of the
+# enclosure. I figure, it's best for the stability of the construction, if
+# there is a base piece where everything else rests on.
+shapes.box_exact(
+    [
+        0,
+        0,
+        0,
+    ],
+    [
+        outer_width,
+        outer_depth,
+        material_strength,
+    ]
+)
+
+# Left and right walls rest on the base and reach from front to back. They don't
+# reach to the outer height, to leave room for the top.
+shapes.box_exact( # left
+    [
+        0,
+        0,
+        material_strength,
+    ],
+    [
+        material_strength,
+        outer_depth,
+        outer_height - material_strength,
+    ],
+)
+shapes.box_exact( # right
+    [
+        outer_width - material_strength,
+        0,
+        material_strength,
+    ],
+    [
+        outer_width,
+        outer_depth,
+        outer_height - material_strength,
+    ],
+)
+
+# The top rests on the left and right walls.
+shapes.box_exact(
+    [
+        0,
+        0,
+        outer_height - material_strength,
+    ],
+    [
+        outer_width,
+        outer_depth,
+        outer_height,
+    ],
+)
+
+# The back fills in the room left by the other parts.
+shapes.box_exact(
+    [
+        material_strength,
+        outer_depth - material_strength,
+        material_strength,
+    ],
+    [
+        outer_width - material_strength,
+        outer_depth,
+        outer_height - material_strength,
+    ],
+)
 
 
 # ## References for Later
