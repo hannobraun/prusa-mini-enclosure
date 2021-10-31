@@ -146,73 +146,90 @@ assert outer_height < 450
 # Now that we got the dimensions, let's think about the structure of the
 # enclosure. I figure, it's best for the stability of the construction, if
 # there is a base piece where everything else rests on.
-shapes.box_exact(
-    [
+base = {
+    "position": [
         0,
         0,
         0,
     ],
-    [
+    "dimensions": [
         outer_width,
         outer_depth,
         material_strength,
-    ]
-)
+    ],
+}
 
 # Left and right walls rest on the base and reach from front to back. They don't
 # reach to the outer height, to leave room for the top.
-shapes.box_exact( # left
-    [
+left = {
+    "position": [
         0,
         0,
         material_strength,
     ],
-    [
+    "dimensions": [
         material_strength,
         outer_depth,
-        outer_height - material_strength,
+        inner_height,
     ],
-)
-shapes.box_exact( # right
-    [
+}
+right = {
+    "position": [
         outer_width - material_strength,
         0,
         material_strength,
     ],
-    [
-        outer_width,
-        outer_depth,
-        outer_height - material_strength,
-    ],
-)
+    "dimensions": left["dimensions"],
+}
 
 # The top rests on the left and right walls.
-shapes.box_exact(
-    [
+top = {
+    "position": [
         0,
         0,
         outer_height - material_strength,
     ],
-    [
-        outer_width,
-        outer_depth,
-        outer_height,
-    ],
-)
+    "dimensions": base["dimensions"],
+}
 
 # The back fills in the room left by the other parts.
-shapes.box_exact(
-    [
+back = {
+    "position": [
         material_strength,
         outer_depth - material_strength,
         material_strength,
     ],
-    [
-        outer_width - material_strength,
-        outer_depth,
-        outer_height - material_strength,
+    "dimensions": [
+        inner_width,
+        material_strength,
+        inner_height,
     ],
-)
+}
+
+
+# Let's model that up real quick.
+components = [
+    base,
+    left,
+    right,
+    top,
+    back,
+]
+result = None
+
+for component in components:
+    start = component["position"]
+    end = [
+        component["position"][i] + component["dimensions"][i]
+            for i in range(3)
+    ]
+    shape = shapes.box_exact(start, end)
+    if result is None:
+        result = shape
+    else:
+        result = result.union(result, shape)
+
+result
 
 
 # ## References for Later
