@@ -119,7 +119,13 @@ assert outer_height == 449
 
 # Now that we know the outer dimensions, we can define the bounds of our CAD
 # modeling space.
-studio.set_bounds([0, 0, 0], [outer_width, outer_depth, outer_height])
+#
+# We need some extra space around our geometry, or it won't render correctly.
+studio.set_bounds(
+    [-1, -1, -1],
+    [outer_width + 1, outer_depth + 1, outer_height + 1],
+)
+
 
 # ## Tolerances
 #
