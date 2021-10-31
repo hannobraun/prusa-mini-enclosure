@@ -118,7 +118,7 @@ assert outer_depth == 494
 assert outer_height == 449
 
 # Now that we know the outer dimensions, we can define the bounds of our CAD
-# modeling space. Let's set the other parameters too, while we're at it.
+# modeling space.
 studio.set_bounds([0, 0, 0], [outer_width, outer_depth, outer_height])
 
 # ## Tolerances
