@@ -135,7 +135,8 @@ studio.set_bounds(
 #
 # However, height is a *critical dimension*. A few mm less won't matter here
 # either, but the height where I want to place the enclosure is limited. As
-# planned, there are only going to be a few mm of space above the enclosure.
+# planned, there are only going to be a few mm of space left above the
+# enclosure.
 #
 # To be on the safe side, the height should be limited to this value:
 assert outer_height < 450
