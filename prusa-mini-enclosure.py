@@ -260,6 +260,64 @@ result
 # built.
 
 
+# ## Access Ports
+#
+# The printer needs to interface with the world outside of the enclosure in
+# various ways:
+# - Power cable
+# - Network cable
+# - USB ports
+# - Filament
+# - Power switch
+#
+# To accommodate these, the enclosure needs two openings. One on the back side,
+# one on the right side.
+#
+# In addition to providing the means to guide cables/filament through, those
+# openings need to be big enough to allow access to the printer's ports. Cables
+# need to be connected/disconnected, filament needs to be loaded/unloaded, and
+# the USB port takes a flash drive.
+#
+# I think the most practical way to address this, is to make the openings rather
+# large, so it is easy to access the inside. To prevent this from causing an
+# unwanted draft during printing, I can later print a panel that covers the
+# openings, still lets cables and filament through, and can removed whenever
+# anything needs to be plugged/unplugged/loaded/unloaded.
+#
+# Since both openings must allow for the same kind of access, they can both have
+# the same height:
+opening_height = 60
+
+# In addition, the lower boundaries of both openings are flush with the upper
+# surface of the base, i.e. the surface the printer stands on.
+#
+# Please note that the the position of those openings is specified in terms of
+# the distances from the _inner_ surfaces of the back and right walls.
+
+
+# ### Back Opening
+#
+# The back opening needs to accommodate the power and network ports. It requires
+# the following width:
+back_opening_width = 130
+
+# Here's the distance from the inner surface of the right wall to the boundary
+# of the opening:
+back_opening_to_right_wall = margin_right + 30
+assert back_opening_to_right_wall == 90
+
+
+# ### Right Opening
+#
+# The right needs to accommodate the USB ports, filament, and power switch. It
+# reqiores the following width:
+right_opening_width = 140
+
+# The distance from the inner surface of the back wall to the boundary of the
+# opening:
+right_opening_to_back_wall = 40
+
+
 # ## References for Later
 #
 # Here's a bunch of stuff that's going to be useful in later stages of the
