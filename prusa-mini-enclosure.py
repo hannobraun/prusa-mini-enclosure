@@ -17,7 +17,10 @@ import studio
 #
 # All units are in millimeters.
 #
-#
+# This is the variable that we'll later store the 3D model in:
+model = None
+
+
 # ## Basic Parameters
 #
 # First, we need to set some basic parameters of the CAD program. Leaving
@@ -216,8 +219,6 @@ components = [
     top,
     back,
 ]
-result = None
-
 for component in components:
     start = component["position"]
     end = [
@@ -225,12 +226,10 @@ for component in components:
             for i in range(3)
     ]
     shape = shapes.box_exact(start, end)
-    if result is None:
-        result = shape
+    if model is None:
+        model = shape
     else:
-        result = result.union(result, shape)
-
-result
+        model = model.union(model, shape)
 
 
 # ## Door
@@ -329,3 +328,8 @@ right_opening_to_back_wall = 40
 # The same shop also has printed parts for extending the display unit:
 # - https://shop.levendigdsgn.com/products/usb-powerswitch-extension-printed-parts-front-prusa-mini
 # - https://shop.levendigdsgn.com/collections/prusa-mini-mods-upgrades/products/usb-powerswitch-backplate-front-prusa-mini
+
+
+# We need to put the model as an expression on the top-level for libfive Studio
+# to pick it up.
+model
