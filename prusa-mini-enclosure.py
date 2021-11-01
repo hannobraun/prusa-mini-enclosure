@@ -317,6 +317,48 @@ right_opening_width = 140
 right_opening_to_back_wall = 40
 
 
+# Here we cut out the openings from our model:
+back_opening = shapes.box_exact(
+    [
+        outer_width
+            - material_strength
+            - back_opening_to_right_wall
+            - back_opening_width,
+        outer_depth
+            - material_strength,
+        material_strength,
+    ],
+    [
+        outer_width
+            - material_strength
+            - back_opening_to_right_wall,
+        outer_depth,
+        material_strength
+            + opening_height,
+    ],
+)
+right_opening = shapes.box_exact(
+    [
+        outer_width
+            - material_strength,
+        outer_depth
+            - material_strength
+            - right_opening_to_back_wall
+            - right_opening_width,
+        material_strength,
+    ],
+    [
+        outer_width,
+        outer_depth
+            - material_strength
+            - right_opening_to_back_wall,
+        material_strength
+            + opening_height,
+    ],
+)
+model = model.difference(back_opening, right_opening)
+
+
 # ## References for Later
 #
 # Here's a bunch of stuff that's going to be useful in later stages of the
