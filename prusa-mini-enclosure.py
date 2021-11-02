@@ -82,9 +82,11 @@ print_bed_overhang_back = 50
 # without bending it too much:
 margin_heat_bed_cable = 60
 
+# Together, this results in the back margin:
+margin_back = print_bed_overhang_back + margin_heat_bed_cable
+
 # Inner depth is the sum of all of these:
-inner_depth = y_assembly_base_depth + print_bed_overhang_back + \
-    margin_heat_bed_cable + margin_front
+inner_depth = y_assembly_base_depth + margin_front + margin_back
 
 # ### Height
 #
