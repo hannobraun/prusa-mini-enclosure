@@ -14,7 +14,7 @@ This is the front view of the enclosure. The big opening is where the door would
 This shows the view from the front-right corner. The right opening is visible from the outside:
 ![front-right view](images/front-right.png)
 
-View from the back-right corner. The back opening is visible from the outside:
+View from the back-right corner. Both the back and right openings are visible from the outside:
 ![back-right view](images/back-right.png)
 
 ## License
