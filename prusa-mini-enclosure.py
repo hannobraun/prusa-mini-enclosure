@@ -63,13 +63,12 @@ inner_width = printer_width + margin_left + margin_right
 # Let's start with the length of the y-axis assembly's base:
 y_assembly_base_depth = 285
 
-# Now let's add how much the print bed overhangs while the y-axis is in its
-# front-most or back-most position, respectively.
-#
-# Front overhang, if y-axis is in front-most position:
+# If the y-axis is in its front-most position, it overhangs this much on the
+# front:
 print_bed_overhang_front = 55
 
-# Back overhang, if y-axis is in back-most position:
+# If the y-axis is in its back-most position, it overhangs this much on the
+# back:
 print_bed_overhang_back = 50
 
 # We can ignore the electronics enclosure. It protrudes behind the y-axis base,
