@@ -2,7 +2,7 @@
 
 ## About
 
-An enclosure for my Prusa Mini. This is work in progress. As of this writing, literally nothing but this README exists.
+An enclosure for my Prusa Mini. This is work in progress.
 
 ## License
 
