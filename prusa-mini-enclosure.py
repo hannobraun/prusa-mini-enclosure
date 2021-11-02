@@ -142,7 +142,7 @@ studio.set_bounds(
 # enclosure.
 #
 # To be on the safe side, the height should be limited to this value:
-assert outer_height < 450
+assert outer_height < 440
 
 
 # ## Structure
