@@ -15,7 +15,7 @@ This shows the view from the front-right corner. The right opening is visible fr
 ![front-right view](images/front-right.png)
 
 View from the back-right corner. The back opening is visible from the outside:
-![back-right view](image/back-right.png)
+![back-right view](images/back-right.png)
 
 ## License
 
