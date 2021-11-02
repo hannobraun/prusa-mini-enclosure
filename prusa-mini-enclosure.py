@@ -311,11 +311,11 @@ assert back_opening_to_right_wall == 90
 #
 # The right needs to accommodate the USB ports, filament, and power switch. It
 # requires the following width:
-right_opening_width = 140
+right_opening_width = 120
 
 # The distance from the inner surface of the back wall to the boundary of the
 # opening:
-right_opening_to_back_wall = 40
+right_opening_to_back_wall = margin_back
 
 
 # Here we cut out the openings from our model:
