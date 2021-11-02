@@ -17,6 +17,9 @@ This shows the view from the front-right corner. The right opening is visible fr
 View from the back-right corner. Both the back and right openings are visible from the outside:
 ![back-right view](images/back-right.png)
 
+View from the back-left corner. The back opening is visible from the outside:
+![back-left view](images/back-left.png)
+
 ## License
 
 This project is open source, licensed under the terms of the [Zero Clause BSD License] (0BSD, for short). This basically means you can do anything with it, without any restrictions, but you can't hold the author liable for problems.
