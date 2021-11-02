@@ -286,7 +286,7 @@ for component in components:
 #
 # Since both openings must allow for the same kind of access, they can both have
 # the same height:
-opening_height = 60
+opening_height = 70
 
 # In addition, the lower boundaries of both openings are flush with the upper
 # surface of the base, i.e. the surface the printer stands on.
