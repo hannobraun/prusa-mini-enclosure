@@ -8,7 +8,7 @@ An enclosure for my Prusa Mini. This is work in progress.
 
 If you have libfive Studio available to you, check out the model in the `model/` directory. If you haven't, the file is still valuable, as it contains all the measurements as well as extensive documentation about how they were derived.
 
-This is the front view of the enclosure. The big opening is where the door would go, and the right and back opening are visible from the inside:
+This is the front view of the enclosure. The big opening is where the door would go, and the back and right openings are visible from the inside:
 ![front view](images/front.png)
 
 This shows the view from the front-right corner. The right opening is visible from the outside:
