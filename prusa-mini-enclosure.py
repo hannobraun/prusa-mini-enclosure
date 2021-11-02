@@ -67,6 +67,9 @@ y_assembly_base_depth = 285
 # front:
 print_bed_overhang_front = 55
 
+# With a bit of additional margin, this results in the front margin:
+margin_front = print_bed_overhang_front + 20
+
 # If the y-axis is in its back-most position, it overhangs this much on the
 # back:
 print_bed_overhang_back = 50
@@ -79,12 +82,9 @@ print_bed_overhang_back = 50
 # without bending it too much:
 margin_heat_bed_cable = 60
 
-# Lastly, we need a bit of margin in the front:
-margin_front = 20
-
 # Inner depth is the sum of all of these:
-inner_depth = y_assembly_base_depth + print_bed_overhang_front + \
-    print_bed_overhang_back + margin_heat_bed_cable + margin_front
+inner_depth = y_assembly_base_depth + print_bed_overhang_back + \
+    margin_heat_bed_cable + margin_front
 
 # ### Height
 #
