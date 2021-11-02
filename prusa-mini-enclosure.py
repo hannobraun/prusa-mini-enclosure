@@ -94,7 +94,7 @@ inner_depth = y_assembly_base_depth + print_bed_overhang_front + \
 printer_height = 385
 
 # Next, a bit of margin on top to take it into or out of the enclosure:
-margin_top = 40
+margin_top = 30
 
 # Sum it up to get the total height:
 inner_height = printer_height + margin_top
@@ -102,7 +102,7 @@ inner_height = printer_height + margin_top
 # These are the values for the inner dimensions:
 assert inner_width == 415
 assert inner_depth == 470
-assert inner_height == 425
+assert inner_height == 415
 
 
 # ## Outer Dimensions
@@ -119,7 +119,7 @@ outer_height = inner_height + material_strength * 2
 # These are the values for the outer dimensions:
 assert outer_width == 439
 assert outer_depth == 494
-assert outer_height == 449
+assert outer_height == 439
 
 # Now that we know the outer dimensions, we can define the bounds of our CAD
 # modeling space.
