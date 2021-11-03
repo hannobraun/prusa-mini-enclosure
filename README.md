@@ -4,6 +4,7 @@
 
 An enclosure for my Prusa Mini. This is work in progress.
 
+
 ## Model
 
 If you have libfive Studio available to you, check out the model in the `model/` directory. If you haven't, the file is still valuable, as it contains all the measurements as well as extensive documentation about how they were derived.
