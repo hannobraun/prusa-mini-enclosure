@@ -21,6 +21,23 @@ View from the back-right corner. Both the back and right openings are visible fr
 View from the back-left corner. The back opening is visible from the outside:
 ![back-left view](images/back-left.png)
 
+
+## Drawings
+
+For full information, check out the CAD model file, but here are some key drawings. All dimensions assume a material strength of 12mm.
+
+Base and top are identical:
+![base and top](drawings/base-and-top.svg)
+
+Left wall:
+![left wall](drawings/left.svg)
+
+Right wall:
+![right wall](drawings/right.svg)
+
+Back wall:
+![back wall](drawings/back.svg)
+
 ## License
 
 This project is open source, licensed under the terms of the [Zero Clause BSD License] (0BSD, for short). This basically means you can do anything with it, without any restrictions, but you can't hold the author liable for problems.
