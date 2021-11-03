@@ -316,7 +316,7 @@ right_opening_width = 120
 # The distance from the inner surface of the back wall to the boundary of the
 # opening:
 right_opening_to_back_wall = margin_back
-assert margin_back == 110
+assert right_opening_to_back_wall == 110
 
 
 # Here we cut out the openings from our model:
