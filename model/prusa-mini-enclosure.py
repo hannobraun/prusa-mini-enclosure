@@ -377,6 +377,11 @@ model = model.difference(back_opening, right_opening)
 # - https://shop.levendigdsgn.com/collections/prusa-mini-mods-upgrades/products/usb-powerswitch-backplate-front-prusa-mini
 
 
+# TASK: Add shelf for power supply and filament on the backside.
+# TASK: Think about lighting. It can probably be done as an afterthought, but
+#       maybe some measures can be taken to support it.
+
+
 # We need to put the model as an expression on the top-level for libfive Studio
 # to pick it up.
 model
