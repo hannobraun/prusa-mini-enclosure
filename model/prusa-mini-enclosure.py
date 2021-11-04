@@ -211,6 +211,9 @@ back = {
     ],
 }
 
+# We've only defined the walls here, but not how to join them together. This is
+# left for the builder to decide.
+
 
 # Let's model that up real quick.
 components = [
