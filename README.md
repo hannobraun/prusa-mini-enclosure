@@ -2,7 +2,7 @@
 
 ## About
 
-An enclosure for my Prusa Mini. This is work in progress.
+An enclosure for my Prusa Mini. The initial design has been finished and is now awaiting implementation. Further refinements and extensions might be added later.
 
 
 ## Model
