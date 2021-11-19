@@ -2,7 +2,22 @@
 
 ## About
 
-An enclosure for my Prusa Mini. The initial design has been finished and is now awaiting implementation. Further refinements and extensions might be added later.
+This is an enclosure for my Prusa Mini. It was designed by me and built by my friend Martin Dederer.
+
+Here's the view of the finished product from the front-right. You can see the door with the window, and the access port for the power switch, USB ports, and filament:
+![front-right view](photos/front-right.jpg)
+
+View from the back-right. Here you also see the back access port for power and network cables:
+![back-right view](photos/back-right.jpg)
+
+And finally, the front view with the door open and the printer inside:
+![front view](photos/front-open.jpg)
+
+This is only the first version. I plan to make some extensions and modifications:
+
+- Make power switch and USB port accessible from the front, using extensions from levendig|dsgn ([[1]](https://shop.levendigdsgn.com/products/usb-powerswitch-extension-cable-prusa-mini), [[2]](https://shop.levendigdsgn.com/products/usb-powerswitch-extension-printed-parts-front-prusa-mini), [[3]](https://shop.levendigdsgn.com/collections/prusa-mini-mods-upgrades/products/usb-powerswitch-backplate-front-prusa-mini)).
+- Print panels that fit over the access ports to further enclose the printer, with holes to let cables and filament through.
+- Add lighting to the inside.
 
 
 ## Model
