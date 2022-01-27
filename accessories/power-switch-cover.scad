@@ -10,6 +10,7 @@ height = 14;
 material = 1;
 
 overhang = 2;
+gap      = 1;
 
 union() {
     cube([
@@ -18,10 +19,10 @@ union() {
         material
     ]);
 
-    translate([overhang, 0, 0])
+    translate([overhang + gap, 0, 0])
     thing();
 
-    translate([width + overhang, 0, 0])
+    translate([width + overhang - gap, 0, 0])
     mirror([1, 0, 0])
     thing();
 }
@@ -31,9 +32,9 @@ union() {
 module thing() {
     depth = 5;
 
-    translate([0, overhang + height, material])
+    translate([0, overhang - gap + height, material])
     rotate([90, 0, 0])
-    linear_extrude(height)
+    linear_extrude(height - gap * 2)
     polygon([
         [ material * 0.25, 0.0],
         [ material       , 0.0],
