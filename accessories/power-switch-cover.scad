@@ -10,7 +10,7 @@ height = 14;
 material = 1;
 
 overhang = 2;
-gap      = 1;
+gap      = 0.5;
 
 union() {
     cube([
