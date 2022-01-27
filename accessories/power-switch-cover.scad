@@ -38,7 +38,9 @@ module thing() {
     polygon([
         [ material * 0.25, 0.0],
         [ material       , 0.0],
+        [ material * 0.75, depth * 0.75],
         [ material       , depth],
-        [-material * 0.25, depth],
+        [ material * 0.25, depth],
+        [            0.0 , depth * 0.75],
     ]);
 }
