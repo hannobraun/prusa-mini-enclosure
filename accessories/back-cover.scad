@@ -1,4 +1,4 @@
-size_inner = [130.3, 69.5];
+size = [130.3, 69.5];
 
 material = 1.0;
 overhang = 8.0;
@@ -12,6 +12,6 @@ module back_cover() {
 
     module base() {
         linear_extrude(material)
-        square(size = size_inner + 2 * [overhang, overhang], center = true);
+        square(size = size + 2 * [overhang, overhang], center = true);
     }
 }
