@@ -13,6 +13,10 @@ module back_cover() {
     translate([0, 0, material])
     holders();
 
+    translate([0, 0, material + overhang])
+    mirror([0, 0, 1])
+    holders();
+
     module base() {
         linear_extrude(material)
         square(size = size + 2 * [overhang, overhang], center = true);
@@ -29,7 +33,7 @@ module back_cover() {
             size_outer[1] / size_inner[1],
         ];
 
-        linear_extrude(height = overhang, scale = scale)
+        linear_extrude(height = overhang / 2, scale = scale)
         difference() {
             square(size = size_inner, center = true);
             square(size = size_inner - [material, material], center = true);
