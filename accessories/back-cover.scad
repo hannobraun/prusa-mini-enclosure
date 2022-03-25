@@ -17,18 +17,21 @@ module back_cover() {
     }
 
     module holders() {
-        size = size - [material, material] * 0.5;
-        size_plus = (size + [material, material]);
+        interference = [0.2, 0.2];
+
+        size_inner = size - interference;
+        size_outer = size + interference;
+
         scale = [
-            size_plus[0] / size[0],
-            size_plus[1] / size[1],
+            size_outer[0] / size_inner[0],
+            size_outer[1] / size_inner[1],
         ];
 
         translate([0, 0, material])
         linear_extrude(height = overhang, scale = scale)
         difference() {
-            square(size = size, center = true);
-            square(size = size - [material, material], center = true);
+            square(size = size_inner, center = true);
+            square(size = size_inner - [material, material], center = true);
 
             corners = [
                 [-size[0], -size[1]],
