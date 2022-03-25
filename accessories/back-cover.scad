@@ -9,6 +9,8 @@ back_cover();
 
 module back_cover() {
     base();
+
+    translate([0, 0, material])
     holders();
 
     module base() {
@@ -27,7 +29,6 @@ module back_cover() {
             size_outer[1] / size_inner[1],
         ];
 
-        translate([0, 0, material])
         linear_extrude(height = overhang, scale = scale)
         difference() {
             square(size = size_inner, center = true);
