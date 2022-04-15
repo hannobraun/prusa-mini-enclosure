@@ -17,18 +17,18 @@ module back_cover() {
     base();
 
     translate([0, 0, material_z])
-    holders();
+    half_holders();
 
     translate([0, 0, material_z + overhang])
     mirror([0, 0, 1])
-    holders();
+    half_holders();
 
     module base() {
         linear_extrude(material_z)
         square(size = size + 2 * [overhang, overhang], center = true);
     }
 
-    module holders() {
+    module half_holders() {
         interference = [0.2, 0.2];
 
         size_inner = size - interference;
