@@ -1,3 +1,7 @@
+// Print settings that this model is designed for
+layer_height    = 0.25;
+extrusion_width = 0.45;
+
 size = [130.3, 69.5];
 
 material = 1.0;
