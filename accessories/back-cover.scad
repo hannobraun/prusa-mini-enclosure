@@ -2,8 +2,6 @@
 layer_height    = 0.25;
 extrusion_width = 0.45;
 
-size = [130.3, 69.5];
-
 material_xy = layer_height * 4;
 material_z  = extrusion_width * 2;
 
@@ -14,6 +12,10 @@ back_cover();
 
 
 module back_cover() {
+    cover([130.3, 69.5]);
+}
+
+module cover(size) {
     base();
 
     translate([0, 0, material_z])
