@@ -9,10 +9,13 @@ overhang = 8.0;
 
 
 back_cover();
+// TASK: Add side cover.
 
 
 module back_cover() {
     cover([130.3, 69.5]);
+
+    // TASK: Add holes.
 }
 
 module cover(size) {
