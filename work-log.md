@@ -5,6 +5,13 @@ I have a daily habit of working on side projects. These projects used to be all 
 As I move more into physical projects, this doesn't work as well. But I do really like that daily commit as a way to track my habit, and I've decided I want to keep it. Hence this work log. Whenever I do work on this project that otherwise wouldn't result in a commit to this repository, I document it here.
 
 
+## 2022-04-25
+
+Printed and installed the cover for the back opening. Very happy with how it turned out!
+
+![The back opening of the printer enclosure, covered by a 3D-printed cover.](work-log/2022-04-25.jpg)
+
+
 ## 2022-01-27
 
 Printed and installed a cover for the opening where the power switch formerly was located.
