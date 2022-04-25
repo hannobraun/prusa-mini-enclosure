@@ -15,9 +15,22 @@ back_cover();
 module back_cover() {
     size = [130.3, 69.5];
 
-    cover(size);
+    difference() {
+        cover(size);
 
-    // TASK: Add holes.
+        linear_extrude(overhang * 4, center = true)
+        mirror([1, 0, 0])
+        translate(-size / 2)
+        union() {
+            // Hole for power cable
+            translate([20, 10])
+            square([16, 16]);
+
+            // Hole for network cable
+            translate([40, 10])
+            square([17, 17]);
+        }
+    }
 }
 
 module cover(size) {
