@@ -8,6 +8,9 @@ material_z  = extrusion_width * 2;
 overhang = 8.0;
 
 
+$fn = 60;
+
+
 module back_cover() {
     cover([130.3, 69.5]) {
         // Hole for power cable
