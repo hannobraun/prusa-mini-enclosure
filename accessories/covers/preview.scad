@@ -1,4 +1,6 @@
 include <modules.scad>;
 
 back_cover();
-// TASK: Add side cover.
+
+translate([0, 150, 0])
+side_cover();
