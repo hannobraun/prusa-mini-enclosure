@@ -25,7 +25,8 @@ module back_cover() {
 
 module side_cover() {
     cover([118.6, 69.7]) {
-        // TASK: Add holes.
+        translate([80, 40])
+        circle(d = 3);
     }
 }
 
