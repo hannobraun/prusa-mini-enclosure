@@ -21,9 +21,9 @@ module back_cover() {
 }
 
 module side_cover() {
-    size = [118.6, 69.7];
-
-    // TASK: Implement.
+    cover([118.6, 69.7]) {
+        // TASK: Add holes.
+    }
 }
 
 module cover(size) {
