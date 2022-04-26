@@ -9,9 +9,7 @@ overhang = 8.0;
 
 
 module back_cover() {
-    size = [130.3, 69.5];
-
-    cover(size) {
+    cover([130.3, 69.5]) {
         // Hole for power cable
         translate([20, 10])
         square([16, 16]);
