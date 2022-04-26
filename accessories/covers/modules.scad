@@ -11,21 +11,14 @@ overhang = 8.0;
 module back_cover() {
     size = [130.3, 69.5];
 
-    difference() {
-        cover(size);
+    cover(size) {
+        // Hole for power cable
+        translate([20, 10])
+        square([16, 16]);
 
-        linear_extrude(overhang * 4, center = true)
-        mirror([1, 0, 0])
-        translate(-size / 2)
-        union() {
-            // Hole for power cable
-            translate([20, 10])
-            square([16, 16]);
-
-            // Hole for network cable
-            translate([40, 10])
-            square([17, 17]);
-        }
+        // Hole for network cable
+        translate([40, 10])
+        square([17, 17]);
     }
 }
 
@@ -36,14 +29,26 @@ module side_cover() {
 }
 
 module cover(size) {
-    base();
+    difference() {
+        union() {
+            base();
 
-    translate([0, 0, material_z])
-    half_holders();
+            translate([0, 0, material_z])
+            half_holders();
 
-    translate([0, 0, material_z + overhang])
-    mirror([0, 0, 1])
-    half_holders();
+            translate([0, 0, material_z + overhang])
+            mirror([0, 0, 1])
+            half_holders();
+        }
+
+        // Holes
+        linear_extrude(overhang * 4, center = true)
+        mirror([1, 0, 0])
+        translate(-size / 2)
+        union() {
+            children();
+        }
+    }
 
     module base() {
         linear_extrude(material_z)
