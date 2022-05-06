@@ -12,7 +12,9 @@ $fn = 60;
 
 
 module back_cover() {
-    cover([130.3, 69.5]) {
+    size = [130.3, 69.5];
+
+    cover(size) {
         // Hole for power cable
         translate([20, 10])
         square([16, 16]);
