@@ -22,6 +22,17 @@ module back_cover() {
         // Hole for network cable
         translate([40, 10])
         square([17, 17]);
+
+        // Holes for lighting cables
+        hole_size = [10, 10];
+        positions = [
+            size - [10, 10] - hole_size,
+            [10, size.y - 10 - hole_size.y],
+        ];
+        for (position = positions) {
+            translate(position)
+            square(hole_size);
+        }
     }
 }
 
