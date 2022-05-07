@@ -5,6 +5,11 @@ I have a daily habit of working on side projects. These projects used to be all 
 As I move more into physical projects, this doesn't work as well. But I do really like that daily commit as a way to track my habit, and I've decided I want to keep it. Hence this work log. Whenever I do work on this project that otherwise wouldn't result in a commit to this repository, I document it here.
 
 
+## 2022-05-07
+
+Tried to print a new version of the back cover, with new holes for the lighting power cables. The printer doesn't print though. Either a clogged nozzle, or something wrong with the extruder, I'm assuming. Will have to investigate.
+
+
 ## 2022-05-05
 
 Installed the lighting in the enclosure.
