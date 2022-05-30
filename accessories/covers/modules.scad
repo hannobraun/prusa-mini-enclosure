@@ -24,7 +24,7 @@ module back_cover() {
         square([17, 17]);
 
         // Holes for lighting cable
-        hole_size = [15, 15];
+        hole_size = [20, 21];
         translate([10, size.y - 10 - hole_size.y])
         square(hole_size);
     }
