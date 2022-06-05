@@ -44,7 +44,7 @@ module side_cover() {
             cut_width  = d / 4;
             cut_length = d * 2;
 
-            circle(d);
+            circle(d = d);
 
             num_cuts = 8;
             for (i = [0 : num_cuts - 1]) {
