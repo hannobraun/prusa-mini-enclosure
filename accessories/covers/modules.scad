@@ -32,8 +32,36 @@ module back_cover() {
 
 module side_cover() {
     cover([118.6, 69.7]) {
+        // This hole is designed to fit a PTFE tube, and hold it in place. Hence
+        // the circle is a bit smaller than the tube, to give it a tight fit.
+        //
+        // To make sure the tube still fits in the hole, the cuts around the
+        // hole allow for some flexing.
         translate([80, 40])
-        circle(d = 3);
+        union() {
+            d = 3.9;
+
+            cut_width  = d / 4;
+            cut_length = d * 2;
+
+            circle(d);
+
+            num_cuts = 8;
+            for (i = [0 : num_cuts - 1]) {
+                angle = 360 / num_cuts * i;
+
+                rotate(angle)
+                union() {
+                    translate([-cut_width / 2, 0])
+                    square([cut_width, cut_length]);
+
+                    translate([0, cut_length])
+                    circle(d = cut_width);
+                }
+
+                echo(angle);
+            }
+        }
     }
 }
 
