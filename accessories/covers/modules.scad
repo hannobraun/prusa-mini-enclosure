@@ -42,7 +42,7 @@ module side_cover() {
             d = 3.9;
 
             cut_width  = d / 4;
-            cut_length = d * 2;
+            cut_length = d;
 
             circle(d = d);
 
