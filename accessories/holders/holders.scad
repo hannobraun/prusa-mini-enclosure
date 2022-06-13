@@ -11,11 +11,12 @@ $fn = 60;
 
 holder(
     length = 100.0,
+    width  = 50.0,
     height = 10.0
 );
 
 
-module holder(length, height) {
+module holder(length, width, height) {
     base_height  = increment_xy * 2;
     flexer_width = increment_xy;
 
