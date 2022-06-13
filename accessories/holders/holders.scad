@@ -52,7 +52,7 @@ module holder(length, width, height) {
             }
 
             module corner() {
-                radius = increment_xy / 2;
+                radius = flexer_width / 2;
 
                 translate([flexer_width, base_height])
                 difference() {
