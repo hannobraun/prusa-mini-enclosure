@@ -20,12 +20,12 @@ module holder(length, width, height) {
     base_height  = increment_xy * 2;
     flexer_width = increment_xy;
 
-    linear_extrude(increment_z * 4)
     lengthwise();
     // TASK: Add second lengthwise part.
     // TASK: Add widthwise parts.
 
     module lengthwise() {
+        linear_extrude(increment_z * 4)
         union() {
             // TASK: Cut out slots for the widthwise parts.
             square([length, base_height]);
