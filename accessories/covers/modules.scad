@@ -18,20 +18,15 @@ module back_cover() {
         // Hole for all cables
         translate([28, 10])
         square([20, 21]);
-    }
-}
 
-module side_cover() {
-    cover([118.6, 69.7]) {
         // This hole is designed to fit a PTFE tube, and hold it in place. Hence
         // the circle is a bit smaller than the tube, to give it a tight fit.
         //
         // To make sure the tube still fits in the hole, the cuts around the
         // hole allow for some flexing.
-        translate([80, 40])
+        d = 3.9;
+        translate([10, size.y - 10])
         union() {
-            d = 3.9;
-
             cut_width  = d / 4;
             cut_length = d;
 
@@ -54,6 +49,10 @@ module side_cover() {
             }
         }
     }
+}
+
+module side_cover() {
+    cover([118.6, 69.7]);
 }
 
 module cover(size) {
