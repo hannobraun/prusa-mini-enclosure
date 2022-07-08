@@ -15,18 +15,9 @@ module back_cover() {
     size = [130.3, 69.5];
 
     cover(size) {
-        // Hole for power cable
-        translate([20, 10])
-        square([16, 16]);
-
-        // Hole for network cable
-        translate([40, 10])
-        square([17, 17]);
-
-        // Holes for lighting cable
-        hole_size = [20, 21];
-        translate([10, size.y - 10 - hole_size.y])
-        square(hole_size);
+        // Hole for all cables
+        translate([28, 10])
+        square([20, 21]);
     }
 }
 
