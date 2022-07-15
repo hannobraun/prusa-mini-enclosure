@@ -44,8 +44,6 @@ module back_cover() {
                     translate([0, cut_length])
                     circle(d = cut_width);
                 }
-
-                echo(angle);
             }
         }
     }
