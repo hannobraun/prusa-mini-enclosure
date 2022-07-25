@@ -23,14 +23,30 @@ holder();
 module holder() {
     base_height = height_total - height_inner;
 
-    polygon([
-        [-length_total / 2, 0],
-        [ length_total / 2, 0],
-        [ length_total / 2, height_total],
-        [ length_inner / 2, height_total],
-        [ length_inner / 2, base_height],
-        [-length_inner / 2, base_height],
-        [-length_inner / 2, height_total],
-        [-length_total / 2, height_total],
-    ]);
+    union() {
+        polygon([
+            [-length_total / 2, 0],
+            [ length_total / 2, 0],
+            [ length_total / 2, height_total],
+            [ length_inner / 2, height_total],
+            [ length_inner / 2, base_height],
+            [-length_inner / 2, base_height],
+            [-length_inner / 2, height_total],
+            [-length_total / 2, height_total],
+        ]);
+
+        translate([-length_total / 2, height_total])
+        lump(1);
+
+        translate([length_total / 2, height_total])
+        lump(-1);
+    }
+
+    module lump(direction) {
+        d = flex_width * 1.5;
+
+        translate([d / 2, 0, 0] * direction)
+        scale([1, 1.5])
+        circle(d = d);
+    }
 }
