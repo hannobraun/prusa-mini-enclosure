@@ -18,13 +18,15 @@ holder();
 
 
 module holder() {
+    base_height = height_total - height_inner;
+
     polygon([
         [-length_total / 2, 0],
         [ length_total / 2, 0],
         [ length_total / 2, height_total],
         [ length_inner / 2, height_total],
-        [ length_inner / 2, height_total - height_inner],
-        [-length_inner / 2, height_total - height_inner],
+        [ length_inner / 2, base_height],
+        [-length_inner / 2, base_height],
         [-length_inner / 2, height_total],
         [-length_total / 2, height_total],
     ]);
