@@ -19,8 +19,8 @@ polygon([
     [ length_total / 2, 0],
     [ length_total / 2, height_total],
     [ length_inner / 2, height_total],
-    [ length_inner / 2, rigid_base * 2],
-    [-length_inner / 2, rigid_base * 2],
+    [ length_inner / 2, height_total - height_inner],
+    [-length_inner / 2, height_total - height_inner],
     [-length_inner / 2, height_total],
     [-length_total / 2, height_total],
 ]);
