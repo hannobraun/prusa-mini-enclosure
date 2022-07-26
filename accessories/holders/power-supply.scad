@@ -40,6 +40,12 @@ module holder() {
 
         translate([length_total / 2, height_total])
         lump(-1);
+
+        translate([-length_inner / 2, base_height])
+        chamfer(1.0);
+
+        translate([length_inner / 2, base_height])
+        chamfer(-1.0);
     }
 
     module lump(direction) {
@@ -48,5 +54,16 @@ module holder() {
         translate([d / 2, 0, 0] * direction)
         scale([1, 1.5])
         circle(d = d);
+    }
+
+    module chamfer(f) {
+        r = 1.0;
+
+        difference() {
+            square([r, r] * 2, center = true);
+
+            translate([f * r, r])
+            circle(r = r);
+        }
     }
 }
