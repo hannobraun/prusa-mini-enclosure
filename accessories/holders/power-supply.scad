@@ -60,7 +60,7 @@ module holder(length_total, length_inner, slot_offset) {
             chamfer(-1.0);
         }
 
-        slot_size = [width, base_height];
+        slot_size = [width * 1.05, base_height];
 
         translate([length_total * 0.25, base_height * slot_offset])
         square(slot_size, center = true);
