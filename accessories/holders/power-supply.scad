@@ -24,6 +24,7 @@ holder();
 module holder() {
     base_height = height_total - height_inner;
 
+    linear_extrude(width)
     difference() {
         union() {
             polygon([
