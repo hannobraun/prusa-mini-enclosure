@@ -9,6 +9,7 @@ power_supply_height =  35;
 // Material strength
 rigid_base = 5;
 flex_width = 3;
+width      = 10;
 
 // Dimensions of printed parts
 length_inner = power_supply_length;
