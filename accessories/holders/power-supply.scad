@@ -24,29 +24,37 @@ holder();
 module holder() {
     base_height = height_total - height_inner;
 
-    union() {
-        polygon([
-            [-length_total / 2, 0],
-            [ length_total / 2, 0],
-            [ length_total / 2, height_total],
-            [ length_inner / 2, height_total],
-            [ length_inner / 2, base_height],
-            [-length_inner / 2, base_height],
-            [-length_inner / 2, height_total],
-            [-length_total / 2, height_total],
-        ]);
+    difference() {
+        union() {
+            polygon([
+                [-length_total / 2, 0],
+                [ length_total / 2, 0],
+                [ length_total / 2, height_total],
+                [ length_inner / 2, height_total],
+                [ length_inner / 2, base_height],
+                [-length_inner / 2, base_height],
+                [-length_inner / 2, height_total],
+                [-length_total / 2, height_total],
+            ]);
 
-        translate([-length_total / 2, height_total])
-        lump(1);
+            translate([-length_total / 2, height_total])
+            lump(1);
 
-        translate([length_total / 2, height_total])
-        lump(-1);
+            translate([length_total / 2, height_total])
+            lump(-1);
 
-        translate([-length_inner / 2, base_height])
-        chamfer(1.0);
+            translate([-length_inner / 2, base_height])
+            chamfer(1.0);
 
-        translate([length_inner / 2, base_height])
-        chamfer(-1.0);
+            translate([length_inner / 2, base_height])
+            chamfer(-1.0);
+        }
+
+        translate([length_total * 0.25, base_height])
+        square([base_height, width], center = true);
+
+        translate([length_total * -0.25, base_height])
+        square([base_height, width], center = true);
     }
 
     module lump(direction) {
