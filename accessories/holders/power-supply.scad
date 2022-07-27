@@ -18,10 +18,13 @@ height_inner = power_supply_height;
 height_total = height_inner + rigid_base * 2;
 
 
-holder();
+holder_lengthwise();
 
+module holder_lengthwise() {
+    holder(length_total, length_inner);
+}
 
-module holder() {
+module holder(length_total, length_inner) {
     base_height = height_total - height_inner;
 
     linear_extrude(width)
