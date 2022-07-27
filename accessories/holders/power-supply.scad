@@ -23,14 +23,14 @@ holder_widthwise();
 
 
 module holder_widthwise() {
-    holder(power_supply_width + flex_width * 2, power_supply_width);
+    holder(power_supply_width + flex_width * 2, power_supply_width, 0.0);
 }
 
 module holder_lengthwise() {
-    holder(power_supply_length + flex_width * 2, power_supply_length);
+    holder(power_supply_length + flex_width * 2, power_supply_length, 1.0);
 }
 
-module holder(length_total, length_inner) {
+module holder(length_total, length_inner, slot_offset) {
     base_height = height_total - height_inner;
 
     linear_extrude(width)
@@ -60,10 +60,10 @@ module holder(length_total, length_inner) {
             chamfer(-1.0);
         }
 
-        translate([length_total * 0.25, base_height])
+        translate([length_total * 0.25, base_height * slot_offset])
         square([base_height, width], center = true);
 
-        translate([length_total * -0.25, base_height])
+        translate([length_total * -0.25, base_height * slot_offset])
         square([base_height, width], center = true);
     }
 
