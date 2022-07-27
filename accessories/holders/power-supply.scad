@@ -60,11 +60,13 @@ module holder(length_total, length_inner, slot_offset) {
             chamfer(-1.0);
         }
 
+        slot_size = [width, base_height];
+
         translate([length_total * 0.25, base_height * slot_offset])
-        square([width, base_height], center = true);
+        square(slot_size, center = true);
 
         translate([length_total * -0.25, base_height * slot_offset])
-        square([width, base_height], center = true);
+        square(slot_size, center = true);
     }
 
     module lump(direction) {
