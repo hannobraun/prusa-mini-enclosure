@@ -18,6 +18,14 @@ height_total = height_inner + rigid_base * 2;
 
 holder_lengthwise();
 
+translate([0, 30, 0])
+holder_widthwise();
+
+
+module holder_widthwise() {
+    holder(power_supply_width + flex_width * 2, power_supply_width);
+}
+
 module holder_lengthwise() {
     holder(power_supply_length + flex_width * 2, power_supply_length);
 }
