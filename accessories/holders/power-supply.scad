@@ -12,8 +12,6 @@ flex_width = 3;
 width      = 10;
 
 // Dimensions of printed parts
-length_inner = power_supply_length;
-length_total = length_inner + flex_width * 2;
 height_inner = power_supply_height;
 height_total = height_inner + rigid_base * 2;
 
@@ -21,7 +19,7 @@ height_total = height_inner + rigid_base * 2;
 holder_lengthwise();
 
 module holder_lengthwise() {
-    holder(length_total, length_inner);
+    holder(power_supply_length + flex_width * 2, power_supply_length);
 }
 
 module holder(length_total, length_inner) {
