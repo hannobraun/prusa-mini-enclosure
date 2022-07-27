@@ -61,10 +61,10 @@ module holder(length_total, length_inner, slot_offset) {
         }
 
         translate([length_total * 0.25, base_height * slot_offset])
-        square([base_height, width], center = true);
+        square([width, base_height], center = true);
 
         translate([length_total * -0.25, base_height * slot_offset])
-        square([base_height, width], center = true);
+        square([width, base_height], center = true);
     }
 
     module lump(direction) {
