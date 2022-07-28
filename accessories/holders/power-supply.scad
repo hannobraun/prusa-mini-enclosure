@@ -33,40 +33,48 @@ module holder_lengthwise() {
 module holder(length_total, length_inner, slot_offset) {
     base_height = height_total - height_inner;
 
-    linear_extrude(width)
     difference() {
-        union() {
-            polygon([
-                [-length_total / 2, 0],
-                [ length_total / 2, 0],
-                [ length_total / 2, height_total],
-                [ length_inner / 2, height_total],
-                [ length_inner / 2, base_height],
-                [-length_inner / 2, base_height],
-                [-length_inner / 2, height_total],
-                [-length_total / 2, height_total],
-            ]);
+        linear_extrude(width)
+        difference() {
+            union() {
+                polygon([
+                    [-length_total / 2, 0],
+                    [ length_total / 2, 0],
+                    [ length_total / 2, height_total],
+                    [ length_inner / 2, height_total],
+                    [ length_inner / 2, base_height],
+                    [-length_inner / 2, base_height],
+                    [-length_inner / 2, height_total],
+                    [-length_total / 2, height_total],
+                ]);
 
-            translate([-length_total / 2, height_total])
-            lump(1);
+                translate([-length_total / 2, height_total])
+                lump(1);
 
-            translate([length_total / 2, height_total])
-            lump(-1);
+                translate([length_total / 2, height_total])
+                lump(-1);
 
-            translate([-length_inner / 2, base_height])
-            chamfer(1.0);
+                translate([-length_inner / 2, base_height])
+                chamfer(1.0);
 
-            translate([length_inner / 2, base_height])
-            chamfer(-1.0);
+                translate([length_inner / 2, base_height])
+                chamfer(-1.0);
+            }
+
+            slot_size = [width * 1.05, base_height];
+
+            translate([length_total * 0.25, base_height * slot_offset])
+            square(slot_size, center = true);
+
+            translate([length_total * -0.25, base_height * slot_offset])
+            square(slot_size, center = true);
         }
 
-        slot_size = [width * 1.05, base_height];
+        translate([-0.25 * length_total, 0, 0])
+        hole();
 
-        translate([length_total * 0.25, base_height * slot_offset])
-        square(slot_size, center = true);
-
-        translate([length_total * -0.25, base_height * slot_offset])
-        square(slot_size, center = true);
+        translate([0.25 * length_total, 0, 0])
+        hole();
     }
 
     module lump(direction) {
@@ -85,6 +93,22 @@ module holder(length_total, length_inner, slot_offset) {
 
             translate([f * r, r])
             circle(r = r);
+        }
+    }
+
+    module hole() {
+        protrusion = 2;
+
+        hole_diameter = 4;
+        hole_height = base_height;
+        head_diameter = 8;
+        head_height = 3;
+
+        translate([0, hole_height + protrusion, width / 2])
+        rotate(90, [1, 0, 0])
+        union() {
+            cylinder(d = hole_diameter, h = hole_height + protrusion * 2);
+            cylinder(d = head_diameter, h = head_height + protrusion);
         }
     }
 }
