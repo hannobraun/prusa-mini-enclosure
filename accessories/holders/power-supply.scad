@@ -78,11 +78,12 @@ module holder(length_total, length_inner, slot_offset) {
     }
 
     module lump(direction) {
+        s = 1.5;
         d = flex_width * 1.5;
         r = d / 2;
 
         translate([r, 0, 0] * direction)
-        scale([1, 1.5])
+        scale([1, s])
         circle(d = d);
     }
 
