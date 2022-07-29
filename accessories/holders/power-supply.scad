@@ -99,10 +99,10 @@ module holder(length_total, length_inner, slot_offset) {
     module hole() {
         protrusion = 2;
 
-        hole_diameter = 4;
+        hole_diameter = 4.5;
         hole_height = base_height;
-        head_diameter = 8;
-        head_height = 3;
+        head_diameter = 9;
+        head_height = 3.5;
 
         translate([0, hole_height + protrusion, width / 2])
         rotate(90, [1, 0, 0])
