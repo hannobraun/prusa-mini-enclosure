@@ -79,7 +79,7 @@ module holder(length_total, length_inner, slot_offset) {
 
     module lump(direction) {
         s = 1.5;
-        d = flex_width * 1.5;
+        d = flex_width * 2.5;
         r = d / 2;
 
         union() {
