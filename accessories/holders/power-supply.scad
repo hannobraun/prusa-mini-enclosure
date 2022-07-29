@@ -82,9 +82,18 @@ module holder(length_total, length_inner, slot_offset) {
         d = flex_width * 1.5;
         r = d / 2;
 
-        translate([r, 0, 0] * direction)
-        scale([1, s])
-        circle(d = d);
+        union() {
+            scale([1, s])
+            translate([r * direction, r])
+            circle(d = d);
+
+            overlap = 1;
+            square_x = flex_width;
+            square_y = r * s;
+
+            translate([square_x / 2 * direction, (square_y - overlap) / 2])
+            square([square_x, square_y + overlap], center = true);
+        }
     }
 
     module chamfer(f) {
