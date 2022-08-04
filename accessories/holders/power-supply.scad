@@ -16,17 +16,13 @@ power_supply_holder();
 
 
 module power_supply_holder() {
-    // Dimensions of printed parts
-    height_inner = power_supply_height;
-    height_total = height_inner + rigid_base * 2;
-
     holders(
         length_total = power_supply_length + flex_width * 2,
         length_inner = power_supply_length,
         width_total  = power_supply_width + flex_width * 2,
         width_inner  = power_supply_width,
-        height_total = height_total,
-        height_inner = height_inner
+        height_total = power_supply_height + rigid_base * 2,
+        height_inner = power_supply_height
     );
 }
 
