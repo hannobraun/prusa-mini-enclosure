@@ -11,15 +11,15 @@ rigid_base = 5;
 flex_width = 3;
 width      = 10;
 
-// Dimensions of printed parts
-height_inner = power_supply_height;
-height_total = height_inner + rigid_base * 2;
-
 
 power_supply_holder();
 
 
 module power_supply_holder() {
+    // Dimensions of printed parts
+    height_inner = power_supply_height;
+    height_total = height_inner + rigid_base * 2;
+
     holder_lengthwise(
         length_total = power_supply_length + flex_width * 2,
         length_inner = power_supply_length,
