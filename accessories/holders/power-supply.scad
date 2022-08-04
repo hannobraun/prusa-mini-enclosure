@@ -23,11 +23,19 @@ holder_widthwise();
 
 
 module holder_widthwise() {
-    holder(power_supply_width + flex_width * 2, power_supply_width, 1.0);
+    holder(
+        power_supply_width + flex_width * 2,
+        power_supply_width,
+        1.0
+    );
 }
 
 module holder_lengthwise() {
-    holder(power_supply_length + flex_width * 2, power_supply_length, 0.0);
+    holder(
+        power_supply_length + flex_width * 2,
+        power_supply_length,
+        0.0
+    );
 }
 
 module holder(length_total, length_inner, slot_offset) {
