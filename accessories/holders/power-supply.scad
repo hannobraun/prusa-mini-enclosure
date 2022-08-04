@@ -22,19 +22,25 @@ power_supply_holder();
 module power_supply_holder() {
     holder_lengthwise(
         length_total = power_supply_length + flex_width * 2,
-        length_inner = power_supply_length
+        length_inner = power_supply_length,
+        height_total = height_total,
+        height_inner = height_inner
     );
 
     translate([0, 30, 0])
     holder_widthwise(
         length_total = power_supply_width + flex_width * 2,
-        length_inner = power_supply_width
+        length_inner = power_supply_width,
+        height_total = height_total,
+        height_inner = height_inner
     );
 }
 
 module holder_lengthwise(
     length_total,
-    length_inner
+    length_inner,
+    height_total,
+    height_inner
 ) {
     holder(
         length_total = length_total,
@@ -47,7 +53,9 @@ module holder_lengthwise(
 
 module holder_widthwise(
     length_total,
-    length_inner
+    length_inner,
+    height_total,
+    height_inner
 ) {
     holder(
         length_total = length_total,
