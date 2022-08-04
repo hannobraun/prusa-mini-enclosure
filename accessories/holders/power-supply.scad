@@ -1,11 +1,6 @@
 $fn = 60;
 
 
-// Dimensions of the power supply, slightly rounded up
-power_supply_length = 174;
-power_supply_width  =  72;
-power_supply_height =  35;
-
 // Material strength
 rigid_base = 5;
 flex_width = 3;
@@ -16,6 +11,11 @@ power_supply_holder();
 
 
 module power_supply_holder() {
+    // Dimensions of the power supply, slightly rounded up
+    power_supply_length = 174;
+    power_supply_width  =  72;
+    power_supply_height =  35;
+
     holders(
         length_total = power_supply_length + flex_width * 2,
         length_inner = power_supply_length,
