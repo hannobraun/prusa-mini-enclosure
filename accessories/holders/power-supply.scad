@@ -16,11 +16,15 @@ height_inner = power_supply_height;
 height_total = height_inner + rigid_base * 2;
 
 
-holder_lengthwise();
+power_supply_holder();
 
-translate([0, 30, 0])
-holder_widthwise();
 
+module power_supply_holder() {
+    holder_lengthwise();
+
+    translate([0, 30, 0])
+    holder_widthwise();
+}
 
 module holder_widthwise() {
     holder(
