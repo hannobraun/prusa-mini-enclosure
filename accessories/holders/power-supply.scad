@@ -24,17 +24,17 @@ holder_widthwise();
 
 module holder_widthwise() {
     holder(
-        power_supply_width + flex_width * 2,
-        power_supply_width,
-        1.0
+        length_total = power_supply_width + flex_width * 2,
+        length_inner = power_supply_width,
+        slot_offset  = 1.0
     );
 }
 
 module holder_lengthwise() {
     holder(
-        power_supply_length + flex_width * 2,
-        power_supply_length,
-        0.0
+        length_total = power_supply_length + flex_width * 2,
+        length_inner = power_supply_length,
+        slot_offset  = 0.0
     );
 }
 
