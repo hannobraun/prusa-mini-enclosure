@@ -32,7 +32,10 @@ module power_supply_holder() {
     );
 }
 
-module holder_lengthwise(length_total, length_inner) {
+module holder_lengthwise(
+    length_total,
+    length_inner
+) {
     holder(
         length_total = length_total,
         length_inner = length_inner,
@@ -42,7 +45,10 @@ module holder_lengthwise(length_total, length_inner) {
     );
 }
 
-module holder_widthwise(length_total, length_inner) {
+module holder_widthwise(
+    length_total,
+    length_inner
+) {
     holder(
         length_total = length_total,
         length_inner = length_inner,
