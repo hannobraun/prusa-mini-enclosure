@@ -7,7 +7,9 @@ flex_width  = 3;
 module holders(
     length,
     width,
-    height
+    height,
+    slot_offset_lengthwise = 0.25,
+    slot_offset_widthwise  = 0.25
 ) {
     length_total = length + flex_width * 2;
     length_inner = length;
@@ -20,7 +22,8 @@ module holders(
         length_total = length_total,
         length_inner = length_inner,
         height_total = height_total,
-        height_inner = height_inner
+        height_inner = height_inner,
+        slot_offset  = slot_offset_lengthwise
     );
 
     translate([0, 30, 0])
@@ -28,7 +31,8 @@ module holders(
         width_total  = width_total,
         width_inner  = width_inner,
         height_total = height_total,
-        height_inner = height_inner
+        height_inner = height_inner,
+        slot_offset  = slot_offset_widthwise
     );
 }
 
@@ -36,13 +40,15 @@ module holder_lengthwise(
     length_total,
     length_inner,
     height_total,
-    height_inner
+    height_inner,
+    slot_offset
 ) {
     holder(
         length_total = length_total,
         length_inner = length_inner,
         height_total = height_total,
         height_inner = height_inner,
+        slot_offset  = slot_offset,
         slot_height  = 0.0
     );
 }
@@ -51,13 +57,15 @@ module holder_widthwise(
     width_total,
     width_inner,
     height_total,
-    height_inner
+    height_inner,
+    slot_offset
 ) {
     holder(
         length_total = width_total,
         length_inner = width_inner,
         height_total = height_total,
         height_inner = height_inner,
+        slot_offset  = slot_offset,
         slot_height  = 1.0
     );
 }
@@ -67,6 +75,7 @@ module holder(
     length_inner,
     height_total,
     height_inner,
+    slot_offset,
     slot_height
 ) {
     difference() {
@@ -99,17 +108,17 @@ module holder(
 
             slot_size = [base_width + 0.2, base_height];
 
-            translate([length_total * 0.25, base_height * slot_height])
+            translate([length_total * slot_offset, base_height * slot_height])
             square(slot_size, center = true);
 
-            translate([length_total * -0.25, base_height * slot_height])
+            translate([length_total * -slot_offset, base_height * slot_height])
             square(slot_size, center = true);
         }
 
-        translate([-0.25 * length_total, 0, 0])
+        translate([-slot_offset * length_total, 0, 0])
         hole();
 
-        translate([0.25 * length_total, 0, 0])
+        translate([slot_offset * length_total, 0, 0])
         hole();
     }
 
