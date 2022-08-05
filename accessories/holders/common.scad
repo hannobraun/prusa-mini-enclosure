@@ -67,8 +67,6 @@ module holder(
     height_inner,
     slot_offset
 ) {
-    base_height = height_total - height_inner;
-
     difference() {
         linear_extrude(base_width)
         difference() {
