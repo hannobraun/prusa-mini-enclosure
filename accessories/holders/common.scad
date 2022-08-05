@@ -43,7 +43,7 @@ module holder_lengthwise(
         length_inner = length_inner,
         height_total = height_total,
         height_inner = height_inner,
-        slot_offset  = 0.0
+        slot_height  = 0.0
     );
 }
 
@@ -58,7 +58,7 @@ module holder_widthwise(
         length_inner = width_inner,
         height_total = height_total,
         height_inner = height_inner,
-        slot_offset  = 1.0
+        slot_height  = 1.0
     );
 }
 
@@ -67,7 +67,7 @@ module holder(
     length_inner,
     height_total,
     height_inner,
-    slot_offset
+    slot_height
 ) {
     difference() {
         linear_extrude(base_width)
@@ -99,10 +99,10 @@ module holder(
 
             slot_size = [base_width + 0.2, base_height];
 
-            translate([length_total * 0.25, base_height * slot_offset])
+            translate([length_total * 0.25, base_height * slot_height])
             square(slot_size, center = true);
 
-            translate([length_total * -0.25, base_height * slot_offset])
+            translate([length_total * -0.25, base_height * slot_height])
             square(slot_size, center = true);
         }
 
