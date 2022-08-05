@@ -7,10 +7,11 @@ flex_width  = 3;
 module holders(
     length_total,
     length_inner,
-    width_total,
-    width_inner,
+    width,
     height
 ) {
+    width_total  = width + flex_width * 2;
+    width_inner  = width;
     height_total = height + base_height;
     height_inner = height;
 
