@@ -11,8 +11,7 @@ power_supply_height =  35;
 
 
 holders(
-    length_total = power_supply_length + flex_width * 2,
-    length_inner = power_supply_length,
-    width        = power_supply_width,
-    height       = power_supply_height
+    length = power_supply_length,
+    width  = power_supply_width,
+    height = power_supply_height
 );
