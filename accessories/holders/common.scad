@@ -1,7 +1,7 @@
 // Material strength
 base_height = 10;
+base_width  = 10;
 flex_width  = 3;
-width       = 10;
 
 
 module holders(
@@ -70,7 +70,7 @@ module holder(
     base_height = height_total - height_inner;
 
     difference() {
-        linear_extrude(width)
+        linear_extrude(base_width)
         difference() {
             union() {
                 polygon([
@@ -97,7 +97,7 @@ module holder(
                 chamfer(-1.0);
             }
 
-            slot_size = [width + 0.2, base_height];
+            slot_size = [base_width + 0.2, base_height];
 
             translate([length_total * 0.25, base_height * slot_offset])
             square(slot_size, center = true);
@@ -151,7 +151,7 @@ module holder(
         head_diameter = 9;
         head_height   = 3.5;
 
-        translate([0, hole_height + protrusion, width / 2])
+        translate([0, hole_height + protrusion, base_width / 2])
         rotate(90, [1, 0, 0])
         union() {
             cylinder(d = hole_diameter, h = hole_height + protrusion * 2);
