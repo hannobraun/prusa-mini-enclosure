@@ -1,4 +1,4 @@
-include <common.scad>;
+use <common.scad>;
 
 $fn = 60;
 
