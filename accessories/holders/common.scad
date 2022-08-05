@@ -9,9 +9,11 @@ module holders(
     length_inner,
     width_total,
     width_inner,
-    height_total,
-    height_inner
+    height
 ) {
+    height_total = height + rigid_base * 2;
+    height_inner = height;
+
     holder_lengthwise(
         length_total = length_total,
         length_inner = length_inner,
