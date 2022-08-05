@@ -1,7 +1,7 @@
 // Material strength
-rigid_base = 10;
-flex_width = 3;
-width      = 10;
+base_height = 10;
+flex_width  = 3;
+width       = 10;
 
 
 module holders(
@@ -11,7 +11,7 @@ module holders(
     width_inner,
     height
 ) {
-    height_total = height + rigid_base;
+    height_total = height + base_height;
     height_inner = height;
 
     holder_lengthwise(
